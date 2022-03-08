@@ -65,12 +65,12 @@ export default class Text extends Sprite {
       this._style.wordWrap,
       this.canvas
     );
-    const width = measured.width;
+    const width = style.width || measured.width;
     const height = measured.height;
     const lines = measured.lines;
     const lineHeight = measured.lineHeight;
     const lineWidths = measured.lineWidths;
-    const maxLineWidth = measured.maxLineWidth;
+    const maxLineWidth = style.width || measured.maxLineWidth;
     const fontProperties = measured.fontProperties;
 
     this.canvas.width = Math.ceil(
